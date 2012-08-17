@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>harmy.me</title><link>http://harmy.me/</link><description></description><atom:link href="http://harmy.me/feeds/tag.life.rss.xml" rel="self"></atom:link><lastBuildDate>Fri, 17 Aug 2012 00:00:00 -0700</lastBuildDate><item><title>Hello World</title><link>http://harmy.me/hello-world.html</link><description>&lt;p&gt;趁Namecheap打折註冊了個harmy.me的域名，從今以後開始培養記錄的習慣。
+所以，Hello World!&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">harmy</dc:creator><pubDate>Fri, 17 Aug 2012 00:00:00 -0700</pubDate><guid>tag:harmy.me,2012-08-17:hello-world.html</guid><category>life</category></item></channel></rss>

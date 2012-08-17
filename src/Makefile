@@ -37,7 +37,7 @@ devserver:
 	$(BASEDIR)/develop_server.sh restart
 
 sync:
-	git commit -am 'update' && git pull && git push
+	git add .. && git commit -am 'update' && git pull && git push
 
 
 .PHONY: html help clean regenerate serve devserver
