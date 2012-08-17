@@ -20,5 +20,6 @@ THEME = 'theme'
 OUTPUT_PATH = '../'
 STATIC_PATHS = ('files', 'images')
 
+DISQUS_SITENAME = 'harmy'
 GITHUB_URL = 'http://github.com/harmy/'
 GOOGLE_ANALYTICS = 'UA-34158001-1'
