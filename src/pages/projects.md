@@ -1,18 +1,13 @@
 Title: Projects
 
-## [Snaaakes!](http://snaaakes.com)
-Online journal for snake owners to track the health and habits of their animals.
+## [brubeckr](https://github.com/harmy/brubeckr)
+a jsonrpc2 handler for [brubeck][0], a socket [ZeroRPC][1] gateway, play as the bridge between [brubeck][0] and [zerorpc][1]. 
 
-## [django-admin-honeypot](https://github.com/dmpayton/django-admin-honeypot)
-Fake Django admin login screen to notify admins of attempted unauthorized access.
+## [onetexture](https://github.com/harmy/onetexture)
+useful scripts writtern in python for convert many textures(png or tga files) into one big texture, used in our commercial mmorpg project.
 
-## [django-mobler](https://github.com/dmpayton/django-mobler)
-User-Agent-based mobile device detection for Django.
 
-## [iHackerNews](https://github.com/dmpayton/python-ihackernews)
-Python library for the iHackerNews API.
+[...and a bunch more on Github](https://github.com/harmy)
 
-## [kusc-android](/pages/kusc-android.html)
-Unofficial Android player for [Classical KUSC](http://www.kusc.org/).
-
-[...and a bunch more on Github](https://github.com/dmpayton)
+[0]: http://brubeck.io
+[1]: https://github.com/dotcloud/zerorpc-python
