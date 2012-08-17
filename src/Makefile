@@ -14,6 +14,7 @@ help:
 	@echo '   make regenerate                  regenerate files upon modification '
 	@echo '   make serve                       serve site at http://localhost:8000'
 	@echo '   make devserver                   start/restart develop_server.sh    '
+	@echo '   make sync                   	   sync with github		      '
 	@echo '                                                                       '
 
 
@@ -34,6 +35,9 @@ serve:
 
 devserver:
 	$(BASEDIR)/develop_server.sh restart
+
+sync:
+	git commit -am 'update' && git pull && git push
 
 
 .PHONY: html help clean regenerate serve devserver
