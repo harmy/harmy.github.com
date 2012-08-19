@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Admin processes | harmy.me</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="icon" href=".././theme/img/favicon.png" />
+    <link rel="stylesheet" href=".././theme/css/dmpayton.css" type="text/css" />
+    <link href=".././feeds/all.rss.xml" type="application/atom+xml" rel="alternate" title="harmy.me" />
+
+    <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+</head>
+
+<body class="page admin-processes">
+
+<a href="http://github.com/harmy/" id="github-ribbon">
+    <img src=".././theme/img/github-ribbon.png" alt="Fork me on Guthub!" />
+</a>
+
+<div id="wrapper">
+    <header id="header">
+        <h1><a href="/">harmy</a></h1>
+        <nav>
+            <ul>
+                <li><a href="/archives.html">Blog</a></li>
+                <li><a href="/pages/projects.html">Projects</a></li>
+                <li><a href="/pages/about.html">About</a></li>
+                <!--<li><a href="/pages/resume.html">Résumé</a></li>-->
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Grumble grumble... -->
+    <div class="clear"></div>
+
+    <div id="main">
+        <div id="content" class="">
+            
+    
+    <h1 class="title">Admin processes</h1>
+    
+    <h2>XII. Admin processes</h2>
+<h3>Run admin/management tasks as one-off processes</h3>
+<p>The <a href="../static/concurrency">process formation</a> is the array of processes that are used to do the app's regular business (such as handling web requests) as it runs.  Separately, developers will often wish to do one-off administrative or maintenance tasks for the app, such as:</p>
+<ul>
+<li>Running database migrations (e.g. <code>manage.py syncdb</code> in Django, <code>rake db:migrate</code> in Rails).</li>
+<li>Running a console (also known as a <a href="http://en.wikipedia.org/wiki/Read-eval-print_loop">REPL</a> shell) to run arbitrary code or inspect the app's models against the live database.  Most languages provide a REPL by running the interpreter without any arguments (e.g. <code>python</code> or <code>erl</code>) or in some cases have a separate command (e.g. <code>irb</code> for Ruby, <code>rails console</code> for Rails).</li>
+<li>Running one-time scripts committed into the app's repo (e.g. <code>php scripts/fix_bad_records.php</code>).</li>
+</ul>
+<p>One-off admin processes should be run in an identical environment as the regular <a href="../static/processes">long-running processes</a> of the app.  They run against a <a href="../static/build-release-run">release</a>, using the same <a href="../static/code">code</a> and <a href="../static/config">config</a> as any process run against that release.  Admin code must ship with application code to avoid synchronization issues.</p>
+<p>The same <a href="../static/dependencies">dependency isolation</a> techniques should be used on all process types.  For example, if the Ruby web process uses the command <code>bundle exec thin start</code>, then a database migration should use <code>bundle exec rake db:migrate</code>.  Likewise, a Python program using Virtualenv should use the vendored <code>bin/python</code> for running both the Tornado webserver and any <code>manage.py</code> admin processes.</p>
+<p>Twelve-factor strongly favors languages which provide a REPL shell out of the box, and which make it easy to run one-off scripts.  In a local deploy, developers invoke one-off admin processes by a direct shell command inside the app's checkout directory.  In a production deploy, developers can use ssh or other remote command execution mechanism provided by that deploy's execution environment to run such a process.</p>
+
+        </div>
+    </div>
+
+    <footer id="footer">
+        <span>Copyright 2012 harmy.me</span><br />
+        <a href="http://creativecommons.org/licenses/by/3.0/us/" rel="nofollow">Some Rights Reserved</a>
+    </footer>
+</div>
+
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-34158001-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>

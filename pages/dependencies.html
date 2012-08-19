@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Dependencies | harmy.me</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="icon" href=".././theme/img/favicon.png" />
+    <link rel="stylesheet" href=".././theme/css/dmpayton.css" type="text/css" />
+    <link href=".././feeds/all.rss.xml" type="application/atom+xml" rel="alternate" title="harmy.me" />
+
+    <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+</head>
+
+<body class="page dependencies">
+
+<a href="http://github.com/harmy/" id="github-ribbon">
+    <img src=".././theme/img/github-ribbon.png" alt="Fork me on Guthub!" />
+</a>
+
+<div id="wrapper">
+    <header id="header">
+        <h1><a href="/">harmy</a></h1>
+        <nav>
+            <ul>
+                <li><a href="/archives.html">Blog</a></li>
+                <li><a href="/pages/projects.html">Projects</a></li>
+                <li><a href="/pages/about.html">About</a></li>
+                <!--<li><a href="/pages/resume.html">Résumé</a></li>-->
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Grumble grumble... -->
+    <div class="clear"></div>
+
+    <div id="main">
+        <div id="content" class="">
+            
+    
+    <h1 class="title">Dependencies</h1>
+    
+    <h2>II. Dependencies</h2>
+<h3>Explicitly declare and isolate dependencies</h3>
+<p>Most programming languages offer a packaging system for distributing support libraries, such as <a href="http://www.cpan.org/">CPAN</a> for Perl or <a href="http://rubygems.org/">Rubygems</a> for Ruby.  Libraries installed through a packaging system can be installed system-wide (known as "site packages") or scoped into the directory containing the app (known as "vendoring" or "bundling").</p>
+<p><strong>A twelve-factor app never relies on implicit existence of system-wide packages.</strong>  It declares all dependencies, completely and exactly, via a <em>dependency declaration</em> manifest.  Furthermore, it uses a <em>dependency isolation</em> tool during execution to ensure that no implicit dependencies "leak in" from the surrounding system.  The full and explicit dependency specification is applied uniformly to both production and development.</p>
+<p>For example, <a href="http://gembundler.com/">Gem Bundler</a> for Ruby offers the <code>Gemfile</code> manifest format for dependency declaration and <code>bundle exec</code> for dependency isolation.  In, Python there are two separate tools for these steps -- <a href="http://www.pip-installer.org/en/latest/">Pip</a> is used for declaration and <a href="http://www.virtualenv.org/en/latest/">Virtualenv</a> for isolation.  Even C has <a href="http://www.gnu.org/s/autoconf/">Autoconf</a> for dependency declaration, and static linking can provide dependency isolation.  No matter what the toolchain, dependency declaration and isolation must always be used together -- only one or the other is not sufficient to satisfy twelve-factor.</p>
+<p>One benefit of explicit dependency declaration is that it simplifies setup for developers new to the app.  The new developer can check out the app's codebase onto their development machine, requiring only the language runtime and dependency manager installed as prerequisites.  They will be able to set up everything needed to run the app's code with a deterministic <em>build command</em>.  For example, the build command for Ruby/Bundler is <code>bundle install</code>, while for Clojure/<a href="https://github.com/technomancy/leiningen#readme">Leiningen</a> it is <code>lein deps</code>.</p>
+<p>Twelve-factor apps also do not rely on the implicit existence of any system tools.  Examples include shelling out to ImageMagick or <code>curl</code>.  While these tools may exist on many or even most systems, there is no guarantee that they will exist on all systems where the app may run in the future, or whether the version found on a future system will be compatible with the app.  If the app needs to shell out to a system tool, that tool should be vendored into the app.</p>
+
+        </div>
+    </div>
+
+    <footer id="footer">
+        <span>Copyright 2012 harmy.me</span><br />
+        <a href="http://creativecommons.org/licenses/by/3.0/us/" rel="nofollow">Some Rights Reserved</a>
+    </footer>
+</div>
+
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-34158001-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>

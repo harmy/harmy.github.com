@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Disposability | harmy.me</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="icon" href=".././theme/img/favicon.png" />
+    <link rel="stylesheet" href=".././theme/css/dmpayton.css" type="text/css" />
+    <link href=".././feeds/all.rss.xml" type="application/atom+xml" rel="alternate" title="harmy.me" />
+
+    <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+</head>
+
+<body class="page disposability">
+
+<a href="http://github.com/harmy/" id="github-ribbon">
+    <img src=".././theme/img/github-ribbon.png" alt="Fork me on Guthub!" />
+</a>
+
+<div id="wrapper">
+    <header id="header">
+        <h1><a href="/">harmy</a></h1>
+        <nav>
+            <ul>
+                <li><a href="/archives.html">Blog</a></li>
+                <li><a href="/pages/projects.html">Projects</a></li>
+                <li><a href="/pages/about.html">About</a></li>
+                <!--<li><a href="/pages/resume.html">Résumé</a></li>-->
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Grumble grumble... -->
+    <div class="clear"></div>
+
+    <div id="main">
+        <div id="content" class="">
+            
+    
+    <h1 class="title">Disposability</h1>
+    
+    <h2>IX. Disposability</h2>
+<h3>Maximize robustness with fast startup and graceful shutdown</h3>
+<p><strong>The twelve-factor app's <a href="../static/processes">processes</a> are <em>disposable</em>, meaning they can be started or stopped a moment's notice.</strong>  This facilitates fast elastic scaling, rapid deployment of <a href="../static/codebase">code</a> or <a href="../static/config">config</a> changes, and robustness of production deploys.</p>
+<p>Processes should strive to <strong>minimize startup time</strong>.  Ideally, a process takes a few seconds from the time the launch command is executed until the process is up and ready to receive requests or jobs.  Small startup time provides more agility for the <a href="../static/build-release-run">release</a> process and scaling up; and it aids robustness, because the process manager can more easily move processes to new physical machines when warranted.</p>
+<p>Processes <strong>shut down gracefully when they receive a <a href="http://en.wikipedia.org/wiki/SIGTERM">SIGTERM</a></strong> signal from the process manager.  For a web process, graceful shutdown is achieved by ceasing to listen on the service port (thereby refusing any new requests), allowing any current requests to finish, and then exiting.  Implicit in this model is that HTTP requests are short (no more than a few seconds), or in the case of long polling, the client should seamlessly attempt to reconnect when the connection is lost.</p>
+<p>For a worker process, graceful shutdown is achieved by returning the current job to the work queue.  For example, on <a href="http://www.rabbitmq.com/">RabbitMQ</a> the worker can send a <a href="http://www.rabbitmq.com/amqp-0-9-1-quickref.html#basic.nack"><code>NACK</code></a>; on <a href="http://kr.github.com/beanstalkd/">Beanstalkd</a>, the job is returned to the queue automatically whenever a worker disconnects.  Lock-based systems such as <a href="https://github.com/collectiveidea/delayed_job#readme">Delayed Job</a> need to be sure to release their lock on the job record.  Implicit in this model is that all jobs are <a href="http://en.wikipedia.org/wiki/Reentrant_%28subroutine%29">reentrant</a>, which typically is achieved by wrapping the results in a transaction, or making the operation <a href="http://en.wikipedia.org/wiki/Idempotence">idempotent</a>.</p>
+<p>Processes should also be <strong>robust against sudden death</strong>, in the case of a failure in the underlying hardware.  While this is a much less common occurrence than a graceful shutdown with <code>SIGTERM</code>, it can still happen.  A recommended approach is use of a robust queueing backend, such as Beanstalkd, that returns jobs to the queue when clients disconnect or time out.  Either way, a twelve-factor app is architected to handle unexpected, non-graceful terminations.  <a href="http://lwn.net/Articles/191059/">Crash-only design</a> takes this concept to its <a href="http://couchdb.apache.org/docs/overview.html">logical conclusion</a>.</p>
+
+        </div>
+    </div>
+
+    <footer id="footer">
+        <span>Copyright 2012 harmy.me</span><br />
+        <a href="http://creativecommons.org/licenses/by/3.0/us/" rel="nofollow">Some Rights Reserved</a>
+    </footer>
+</div>
+
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-34158001-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>

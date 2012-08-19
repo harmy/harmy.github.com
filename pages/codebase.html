@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Codebase | harmy.me</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="icon" href=".././theme/img/favicon.png" />
+    <link rel="stylesheet" href=".././theme/css/dmpayton.css" type="text/css" />
+    <link href=".././feeds/all.rss.xml" type="application/atom+xml" rel="alternate" title="harmy.me" />
+
+    <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+</head>
+
+<body class="page codebase">
+
+<a href="http://github.com/harmy/" id="github-ribbon">
+    <img src=".././theme/img/github-ribbon.png" alt="Fork me on Guthub!" />
+</a>
+
+<div id="wrapper">
+    <header id="header">
+        <h1><a href="/">harmy</a></h1>
+        <nav>
+            <ul>
+                <li><a href="/archives.html">Blog</a></li>
+                <li><a href="/pages/projects.html">Projects</a></li>
+                <li><a href="/pages/about.html">About</a></li>
+                <!--<li><a href="/pages/resume.html">Résumé</a></li>-->
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Grumble grumble... -->
+    <div class="clear"></div>
+
+    <div id="main">
+        <div id="content" class="">
+            
+    
+    <h1 class="title">Codebase</h1>
+    
+    <h2>I. Codebase</h2>
+<h3>One codebase tracked in revision control, many deploys</h3>
+<p>A twelve-factor app is always tracked in a version control system, such as <a href="http://git-scm.com/">Git</a>, <a href="http://mercurial.selenic.com/">Mercurial</a>, or <a href="http://subversion.apache.org/">Subversion</a>.  A copy of the revision tracking database is known as a <em>code repository</em>, often shortened to <em>code repo</em> or just <em>repo</em>.</p>
+<p>A <em>codebase</em> is any single repo (in a centralized revision control system like Subversion), or any set of repos who share a root commit (in a decentralized revision control system like Git).</p>
+<p><img alt="One codebase maps to many deploys" src="../static/images/codebase-deploys.png" /></p>
+<p>There is always a one-to-one correlation between the codebase and the app:</p>
+<ul>
+<li>If there are multiple codebases, it's not an app -- it's a distributed system.  Each component in a distributed system is an app, and each can individually comply with twelve-factor.</li>
+<li>Multiple apps sharing the same code is a violation of twelve-factor.  The solution here is to factor shared code into libraries which can be included through the <a href="../static/dependencies">dependency manager</a>.</li>
+</ul>
+<p>There is only one codebase per app, but there will be many deploys of the app.  A <em>deploy</em> is a running instance of the app.  This is typically a production site, and one or more staging sites.  Additionally, every developer has a copy of the app running in their local development environment, each of which also qualifies as a deploy.</p>
+<p>The codebase is the same across all deploys, although different versions may be active in each deploy.  For example, a developer has some commits not yet deployed to staging; staging has some commits not yet deployed to production.  But they all share the same codebase, thus making them identifiable as different deploys of the same app.</p>
+
+        </div>
+    </div>
+
+    <footer id="footer">
+        <span>Copyright 2012 harmy.me</span><br />
+        <a href="http://creativecommons.org/licenses/by/3.0/us/" rel="nofollow">Some Rights Reserved</a>
+    </footer>
+</div>
+
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-34158001-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>

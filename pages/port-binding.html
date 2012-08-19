@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Port binding | harmy.me</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="icon" href=".././theme/img/favicon.png" />
+    <link rel="stylesheet" href=".././theme/css/dmpayton.css" type="text/css" />
+    <link href=".././feeds/all.rss.xml" type="application/atom+xml" rel="alternate" title="harmy.me" />
+
+    <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+</head>
+
+<body class="page port-binding">
+
+<a href="http://github.com/harmy/" id="github-ribbon">
+    <img src=".././theme/img/github-ribbon.png" alt="Fork me on Guthub!" />
+</a>
+
+<div id="wrapper">
+    <header id="header">
+        <h1><a href="/">harmy</a></h1>
+        <nav>
+            <ul>
+                <li><a href="/archives.html">Blog</a></li>
+                <li><a href="/pages/projects.html">Projects</a></li>
+                <li><a href="/pages/about.html">About</a></li>
+                <!--<li><a href="/pages/resume.html">Résumé</a></li>-->
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Grumble grumble... -->
+    <div class="clear"></div>
+
+    <div id="main">
+        <div id="content" class="">
+            
+    
+    <h1 class="title">Port binding</h1>
+    
+    <h2>VII. Port binding</h2>
+<h3>Export services via port binding</h3>
+<p>Web apps are sometimes executed inside a webserver container.  For example, PHP apps might run as a module inside <a href="http://httpd.apache.org/">Apache HTTPD</a>, or Java apps might run inside <a href="http://tomcat.apache.org/">Tomcat</a>.</p>
+<p><strong>The twelve-factor app is completely self-contained</strong> and does not rely on runtime injection of a webserver into the execution environment to create a web-facing service.  The web app <strong>exports HTTP as a service by binding to a port</strong>, and listening to requests coming in on that port.</p>
+<p>In a local development environment, the developer visits a service URL like <code>http://localhost:5000/</code> to access the service exported by their app.  In deployment, a routing layer handles routing requests from a public-facing hostname to the port-bound web processes.</p>
+<p>This is typically implemented by using <a href="../static/dependencies">dependency declaration</a> to add a webserver library to the app, such as <a href="http://www.tornadoweb.org/">Tornado</a> for Python, <a href="http://code.macournoyer.com/thin/">Thin</a> for Ruby, or <a href="http://jetty.codehaus.org/jetty/">Jetty</a> for Java and other JVM-based languages.  This happens entirely in <em>user space</em>, that is, within the app's code.  The contract with the execution environment is binding to a port to serve requests.</p>
+<p>HTTP is not the only service that can be exported by port binding.  Nearly any kind of server software can be run via a process binding to a port and awaiting incoming requests.  Examples include <a href="http://www.ejabberd.im/">ejabberd</a> (speaking <a href="http://xmpp.org/">XMPP</a>), and <a href="http://redis.io/">Redis</a> (speaking the <a href="http://redis.io/topics/protocol">Redis protocol</a>).</p>
+<p>Note also that the port-binding approach means that one app can become the <a href="../static/backing-services">backing service</a> for another app, by providing the URL to the backing app as a resource handle in the <a href="../static/config">config</a> for the consuming app.</p>
+
+        </div>
+    </div>
+
+    <footer id="footer">
+        <span>Copyright 2012 harmy.me</span><br />
+        <a href="http://creativecommons.org/licenses/by/3.0/us/" rel="nofollow">Some Rights Reserved</a>
+    </footer>
+</div>
+
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-34158001-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>

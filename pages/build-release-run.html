@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Build, release, run | harmy.me</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="icon" href=".././theme/img/favicon.png" />
+    <link rel="stylesheet" href=".././theme/css/dmpayton.css" type="text/css" />
+    <link href=".././feeds/all.rss.xml" type="application/atom+xml" rel="alternate" title="harmy.me" />
+
+    <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+</head>
+
+<body class="page build-release-run">
+
+<a href="http://github.com/harmy/" id="github-ribbon">
+    <img src=".././theme/img/github-ribbon.png" alt="Fork me on Guthub!" />
+</a>
+
+<div id="wrapper">
+    <header id="header">
+        <h1><a href="/">harmy</a></h1>
+        <nav>
+            <ul>
+                <li><a href="/archives.html">Blog</a></li>
+                <li><a href="/pages/projects.html">Projects</a></li>
+                <li><a href="/pages/about.html">About</a></li>
+                <!--<li><a href="/pages/resume.html">Résumé</a></li>-->
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Grumble grumble... -->
+    <div class="clear"></div>
+
+    <div id="main">
+        <div id="content" class="">
+            
+    
+    <h1 class="title">Build, release, run</h1>
+    
+    <h2>V. Build, release, run</h2>
+<h3>Strictly separate build and run stages</h3>
+<p>A <a href="../static/codebase">codebase</a> is transformed into a (non-development) deploy through three stages:</p>
+<ul>
+<li>The <em>build stage</em> is a transform which converts a code repo into an executable bundle known as a <em>build</em>.  Using a version of the code at a commit specified by the deployment process, the build stage fetches and vendors <a href="../static/dependencies">dependencies</a> and compiles binaries and assets.</li>
+<li>The <em>release stage</em> takes the build produced by the build stage and combines it with the deploy's current <a href="../static/config">config</a>.  The resulting <em>release</em> contains both the build and the config and is ready for immediate execution in the execution environment.</li>
+<li>The <em>run stage</em> (also known as "runtime") runs the app in the execution environment, by launching some set of the app's <a href="../static/processes">processes</a> against a selected release.</li>
+</ul>
+<p><img alt="Code becomes a build, which is combined with config to create a release." src="../static/images/release.png" /></p>
+<p><strong>The twelve-factor app uses strict separation between the build, release, and run stages.</strong>  For example, it is impossible to make changes to the code at runtime, since there is no way to propagate those changes back to the build stage.</p>
+<p>Deployment tools typically offer release management tools, most notably the ability to roll back to a previous release.  For example, the <a href="https://github.com/capistrano/capistrano/wiki">Capistrano</a> deployment tool stores releases in a subdirectory named <code>releases</code>, where the current release is a symlink to the current release directory.  Its <code>rollback</code> command makes it easy to quickly roll back to a previous release.</p>
+<p>Every release should always have a unique release ID, such as a timestamp of the release (such as <code>2011-04-06-20:32:17</code>) or an incrementing number (such as <code>v100</code>).  Releases are an append-only ledger and a release cannot be mutated once it is created.  Any change must create a new release.</p>
+<p>Builds are initiated by the app's developers whenever new code is deployed.  Runtime execution, by contrast, can happen automatically in cases such as a server reboot, or a crashed process being restarted by the process manager.  Therefore, the run stage should be kept to as few moving parts as possible, since problems that prevent an app from running can cause it to break in the middle of the night when no developers are on hand.  The build stage can be more complex, since errors are always in the foreground for a developer who is driving the deploy.</p>
+
+        </div>
+    </div>
+
+    <footer id="footer">
+        <span>Copyright 2012 harmy.me</span><br />
+        <a href="http://creativecommons.org/licenses/by/3.0/us/" rel="nofollow">Some Rights Reserved</a>
+    </footer>
+</div>
+
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-34158001-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>

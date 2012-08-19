@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Processes | harmy.me</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="icon" href=".././theme/img/favicon.png" />
+    <link rel="stylesheet" href=".././theme/css/dmpayton.css" type="text/css" />
+    <link href=".././feeds/all.rss.xml" type="application/atom+xml" rel="alternate" title="harmy.me" />
+
+    <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+</head>
+
+<body class="page processes">
+
+<a href="http://github.com/harmy/" id="github-ribbon">
+    <img src=".././theme/img/github-ribbon.png" alt="Fork me on Guthub!" />
+</a>
+
+<div id="wrapper">
+    <header id="header">
+        <h1><a href="/">harmy</a></h1>
+        <nav>
+            <ul>
+                <li><a href="/archives.html">Blog</a></li>
+                <li><a href="/pages/projects.html">Projects</a></li>
+                <li><a href="/pages/about.html">About</a></li>
+                <!--<li><a href="/pages/resume.html">Résumé</a></li>-->
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Grumble grumble... -->
+    <div class="clear"></div>
+
+    <div id="main">
+        <div id="content" class="">
+            
+    
+    <h1 class="title">Processes</h1>
+    
+    <h2>VI. Processes</h2>
+<h3>Execute the app as one or more stateless processes</h3>
+<p>The app is executed in the execution environment as one or more <em>processes</em>.</p>
+<p>In the simplest case, the code is a stand-alone script, the execution environment is a developer's local laptop with an installed language runtime, and the process is launched via the command line (for example, <code>python my_script.py</code>).  On the other end of the spectrum, a production deploy of a sophisticated app may use many <a href="../static/concurrency">process types, instantiated into zero or more running processes</a>.</p>
+<p><strong>Twelve-factor processes are stateless and <a href="http://en.wikipedia.org/wiki/Shared_nothing_architecture">share-nothing</a>.</strong>  Any data that needs to persist must be stored in a stateful <a href="../static/backing-services">backing service</a>, typically a database.</p>
+<p>The memory space or filesystem of the process can be used as a brief, single-transaction cache.  For example, downloading a large file, operating on it, and storing the results of the operation in the database.  The twelve-factor app never assumes that anything cached in memory or on disk will be available on a future request or job -- with many processes of each type running, chances are high that a future request will be served by a different process.  Even when running only one process, a restart (triggered by code deploy, config change, or the execution environment relocating the process to a different physical location) will usually wipe out all local (e.g., memory and filesystem) state.</p>
+<p>Asset packagers (such as <a href="http://documentcloud.github.com/jammit/">Jammit</a> or <a href="http://code.google.com/p/django-assetpackager/">django-assetpackager</a>) use the filesystem as a cache for compiled assets.  A twelve-factor app prefers to do this compiling during the <a href="../static/build-release-run">build stage</a>, such as the <a href="http://ryanbigg.com/guides/asset_pipeline.html">Rails asset pipeline</a>, rather than at runtime.</p>
+<p>Some web systems rely on <a href="http://en.wikipedia.org/wiki/Load_balancing_%28computing%29#Persistence">"sticky sessions"</a> -- that is, caching user session data in memory of the app's process and expecting future requests from the same visitor to be routed to the same process.  Sticky sessions are a violation of twelve-factor and should never be used or relied upon.  Session state data is a good candidate for a datastore that offers time-expiration, such as <a href="http://memcached.org/">Memcached</a> or <a href="http://redis.io/">Redis</a>.</p>
+
+        </div>
+    </div>
+
+    <footer id="footer">
+        <span>Copyright 2012 harmy.me</span><br />
+        <a href="http://creativecommons.org/licenses/by/3.0/us/" rel="nofollow">Some Rights Reserved</a>
+    </footer>
+</div>
+
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-34158001-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>
