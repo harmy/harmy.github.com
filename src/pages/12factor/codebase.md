@@ -1,4 +1,4 @@
-Title: Codebase/代码库
+Title: Codebase
 
 ## I. Codebase/代码库
 ### One codebase tracked in revision control, many deploys
