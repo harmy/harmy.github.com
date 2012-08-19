@@ -1,50 +1,53 @@
 Title: The Twelve Factors
 
-## [I. Codebase][]
+## [I. Codebase/代码库][0]
 ### One codebase tracked in revision control, many deploys
+### 一个代码库，无数次部署
 
-## [II. Dependencies][]
+## [II. Dependencies/依赖][1]
 ### Explicitly declare and isolate dependencies
+### 显示声明并隔离依赖
 
-## [III. Config][]
+## [III. Config/配置][2]
 ### Store config in the environment
+### 用环境变量保存配置
 
-## [IV. Backing Services][]
+## [IV. Backing Services][3]
 ### Treat backing services as attached resources
 
-## [V. Build, release, run][]
+## [V. Build, release, run][4]
 ### Strictly separate build and run stages
 
-## [VI. Processes][]
+## [VI. Processes][5]
 ### Execute the app as one or more stateless processes
 
-## [VII. Port binding][]
+## [VII. Port binding][6]
 ### Export services via port binding
 
-## [VIII. Concurrency][]
+## [VIII. Concurrency][7]
 ### Scale out via the process model
 
-## [IX. Disposability][]
+## [IX. Disposability][8]
 ### Maximize robustness with fast startup and graceful shutdown
 
-## [X. Dev/prod parity][]
+## [X. Dev/prod parity][9]
 ### Keep development, staging, and production as similar as possible
 
-## [XI. Logs][]
+## [XI. Logs][10]
 ### Treat logs as event streams
 
-## [XII. Admin processes][]
+## [XII. Admin processes][11]
 ### Run admin/management tasks as one-off processes
 
-[I. Codebase]: /pages/codebase.html
-[II. Dependencies]: http://www.harmy.me/pages/dependencies.html
-[III. Config]: http://www.harmy.me/pages/config.html
-[IV. Backing Services]: http://www.harmy.me/pages/backing-services.html
-[V. Build, release, run]: http://www.harmy.me/pages/build-release-run.html
-[VI. Processes]: http://www.harmy.me/pages/processes.html
-[VII. Port binding]: http://www.harmy.me/pages/port-binding.html
-[VIII. Concurrency]: http://www.harmy.me/pages/concurrency.html
-[IX. Disposability]: http://www.harmy.me/pages/disposability
-[X. Dev/prod parity]: http://www.harmy.me/pages/devprod-parity.html
-[XI. Logs]: http://www.harmy.me/pages/logs.html
-[XII. Admin processes]: http://www.harmy.me/pages/admin-processes.html
+[0]: http://www.harmy.me/pages/codebase.html
+[1]: http://www.harmy.me/pages/dependencies.html
+[2]: http://www.harmy.me/pages/config.html
+[3]: http://www.harmy.me/pages/backing-services.html
+[4]: http://www.harmy.me/pages/build-release-run.html
+[5]: http://www.harmy.me/pages/processes.html
+[6]: http://www.harmy.me/pages/port-binding.html
+[7]: http://www.harmy.me/pages/concurrency.html
+[8]: http://www.harmy.me/pages/disposability
+[9]: http://www.harmy.me/pages/devprod-parity.html
+[10]: http://www.harmy.me/pages/logs.html
+[11]: http://www.harmy.me/pages/admin-processes.html
