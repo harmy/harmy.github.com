@@ -6,7 +6,7 @@ Title: Codebase
 
 A twelve-factor app is always tracked in a version control system, such as [Git](http://git-scm.com/), [Mercurial](http://mercurial.selenic.com/), or [Subversion](http://subversion.apache.org/).  A copy of the revision tracking database is known as a *code repository*, often shortened to *code repo* or just *repo*.
 
-一个12原则应用通常托管于版本控制系统，比如[Git](http://git-scm.com/), [Mercurial](http://mercurial.selenic.com/), 或[Subversion](http://subversion.apache.org/).  A copy of the revision tracking database is known as a *code repository*, often shortened to *code repo* or just *repo*.
+一个12原则应用通常托管于版本控制系统，比如[Git](http://git-scm.com/)，[Mercurial](http://mercurial.selenic.com/)， 或[Subversion](http://subversion.apache.org/)。用于跟踪修订版本的数据库被称作*code repository*，经常简称为*code repo*或者*repo*。
 
 A *codebase* is any single repo (in a centralized revision control system like Subversion), or any set of repos who share a root commit (in a decentralized revision control system like Git).
 
