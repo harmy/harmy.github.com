@@ -34,7 +34,7 @@ Title: The Twelve Factors
 ## [X. Dev/prod parity][9]
 ### Keep development, staging, and production as similar as possible
 
-## [XI. Logs][10]
+## [XI. Logs/日志][10]
 ### Treat logs as event streams
 
 ## [XII. Admin processes][11]
