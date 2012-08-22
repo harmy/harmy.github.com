@@ -12,19 +12,20 @@ Title: The Twelve Factors
 ### Store config in the environment
 ### 用环境变量保存配置
 
-## [IV. Backing Services][3]
+## [IV. Backing Services/后端服务][3]
 ### Treat backing services as attached resources
+### 将后端服务当做附加资源对待
 
-## [V. Build, release, run][4]
+## [V. Build, release, run/构建，发布，运行][4]
 ### Strictly separate build and run stages
 
-## [VI. Processes][5]
+## [VI. Processes/进程][5]
 ### Execute the app as one or more stateless processes
 
-## [VII. Port binding][6]
+## [VII. Port binding/端口绑定][6]
 ### Export services via port binding
 
-## [VIII. Concurrency][7]
+## [VIII. Concurrency/并发][7]
 ### Scale out via the process model
 
 ## [IX. Disposability][8]
