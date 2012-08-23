@@ -1,5 +1,5 @@
 Title: XII. 管理进程
-Slug: admin-process
+Slug: admin-processes
 
 ### 后台管理任务当作一次性进程运行
 

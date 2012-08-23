@@ -80,6 +80,6 @@ The Twelve Factors
 [6]: http://www.harmy.me/pages/port-binding.html
 [7]: http://www.harmy.me/pages/concurrency.html
 [8]: http://www.harmy.me/pages/disposability
-[9]: http://www.harmy.me/pages/devprod-parity.html
+[9]: http://www.harmy.me/pages/dev-prod-parity.html
 [10]: http://www.harmy.me/pages/logs.html
 [11]: http://www.harmy.me/pages/admin-processes.html
