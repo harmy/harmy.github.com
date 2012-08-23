@@ -36,7 +36,7 @@
 &lt;h3&gt;通过进程模型进行扩展&lt;/h3&gt;
 &lt;h2&gt;&lt;a href="http://www.harmy.me/pages/disposability"&gt;IX. 易处理&lt;/a&gt;&lt;/h2&gt;
 &lt;h3&gt;快速启动和优雅终止可最大化健壮性&lt;/h3&gt;
-&lt;h2&gt;&lt;a href="http://www.harmy.me/pages/devprod-parity.html"&gt;X. 开发环境与线上环境等价&lt;/a&gt;&lt;/h2&gt;
+&lt;h2&gt;&lt;a href="http://www.harmy.me/pages/dev-prod-parity.html"&gt;X. 开发环境与线上环境等价&lt;/a&gt;&lt;/h2&gt;
 &lt;h3&gt;尽可能的保持开发，预发布，线上环境相同&lt;/h3&gt;
 &lt;h2&gt;&lt;a href="http://www.harmy.me/pages/logs.html"&gt;XI. 日志&lt;/a&gt;&lt;/h2&gt;
 &lt;h3&gt;把日志当作事件流&lt;/h3&gt;
