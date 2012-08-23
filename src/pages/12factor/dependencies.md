@@ -1,9 +1,9 @@
-Title: Dependencies
+Title: II. 依赖
+Slug: dependencies
 
-## II. Dependencies
-### Explicitly declare and isolate dependencies
+### 显示声明并隔离依赖
 
-Most programming languages offer a packaging system for distributing support libraries, such as [CPAN](http://www.cpan.org/) for Perl or [Rubygems](http://rubygems.org/) for Ruby.  Libraries installed through a packaging system can be installed system-wide (known as "site packages") or scoped into the directory containing the app (known as "vendoring" or "bundling").
+大多数编程语言提供一个包管理系统，用于分发支持库，比如Perl的[CPAN](http://www.cpan.org/)或者Ruby的[Rubygems](http://rubygems.org/)。通过包管理系统分发的库可以安装到系统范围(称做"site packages")或仅局限于应用所在的目录范围（称为"vendoring"或"bundling"）。
 
 **A twelve-factor app never relies on implicit existence of system-wide packages.**  It declares all dependencies, completely and exactly, via a *dependency declaration* manifest.  Furthermore, it uses a *dependency isolation* tool during execution to ensure that no implicit dependencies "leak in" from the surrounding system.  The full and explicit dependency specification is applied uniformly to both production and development.
 
