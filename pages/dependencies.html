@@ -40,7 +40,7 @@
     
     <h1 class="title">II. 依赖</h1>
     
-    <h3>显示声明并隔离依赖</h3>
+    <h3>显式声明并隔离依赖</h3>
 <p>大多数编程语言提供一个包管理系统，用于分发支持库，比如Perl的<a href="http://www.cpan.org/">CPAN</a>或者Ruby的<a href="http://rubygems.org/">Rubygems</a>。通过包管理系统分发的库可以安装到系统范围(称做"site packages")或仅局限于应用所在的目录范围（称为"vendoring"或"bundling"）。</p>
 <p><strong>A twelve-factor app never relies on implicit existence of system-wide packages.</strong>  It declares all dependencies, completely and exactly, via a <em>dependency declaration</em> manifest.  Furthermore, it uses a <em>dependency isolation</em> tool during execution to ensure that no implicit dependencies "leak in" from the surrounding system.  The full and explicit dependency specification is applied uniformly to both production and development.</p>
 <p>For example, <a href="http://gembundler.com/">Gem Bundler</a> for Ruby offers the <code>Gemfile</code> manifest format for dependency declaration and <code>bundle exec</code> for dependency isolation.  In, Python there are two separate tools for these steps -- <a href="http://www.pip-installer.org/en/latest/">Pip</a> is used for declaration and <a href="http://www.virtualenv.org/en/latest/">Virtualenv</a> for isolation.  Even C has <a href="http://www.gnu.org/s/autoconf/">Autoconf</a> for dependency declaration, and static linking can provide dependency isolation.  No matter what the toolchain, dependency declaration and isolation must always be used together -- only one or the other is not sufficient to satisfy twelve-factor.</p>
