@@ -12,3 +12,19 @@ Slug: dependencies
 显式声明依赖的优点之一是为新进开发者简化了环境配置流程。新进开发者可以检出应用程序的基准代码，安装编程语言环境和它对应的依赖管理工具，只需通过一个 *构建命令* 来安装所有的依赖项，即可开始工作。例如，Ruby/Bundler下使用`bundle install`，而Clojure/[Leiningen](https://github.com/technomancy/leiningen#readme) 则是`lein deps`。
 
 12-Factor应用同样不会隐式依赖某些系统工具，如ImageMagick或是`curl`。即使这些工具存在于几乎所有系统，但终究无法保证所有未来的系统都能支持应用顺利运行，或是能够和应用兼容。如果应用必须使用到某些系统工具，那么这些工具应该被包含在应用之中。
+
+[上一页：基准代码][0]
+[下一页：配置][2]
+
+[0]: http://www.harmy.me/pages/codebase.html
+[1]: http://www.harmy.me/pages/dependencies.html
+[2]: http://www.harmy.me/pages/config.html
+[3]: http://www.harmy.me/pages/backing-services.html
+[4]: http://www.harmy.me/pages/build-release-run.html
+[5]: http://www.harmy.me/pages/processes.html
+[6]: http://www.harmy.me/pages/port-binding.html
+[7]: http://www.harmy.me/pages/concurrency.html
+[8]: http://www.harmy.me/pages/disposability
+[9]: http://www.harmy.me/pages/devprod-parity.html
+[10]: http://www.harmy.me/pages/logs.html
+[11]: http://www.harmy.me/pages/admin-processes.html

@@ -16,3 +16,19 @@ Slug: logs
 * 找出过去一段时间特殊的事件。
 * 图形化一个大规模的趋势，比如每分钟的请求量。
 * 根据用户定义的条件实时触发警报，比如每分钟的报错超过某个警戒线。
+
+[上一页：开发环境与线上环境等价][9]
+[下一页：管理进程][11]
+
+[0]: http://www.harmy.me/pages/codebase.html
+[1]: http://www.harmy.me/pages/dependencies.html
+[2]: http://www.harmy.me/pages/config.html
+[3]: http://www.harmy.me/pages/backing-services.html
+[4]: http://www.harmy.me/pages/build-release-run.html
+[5]: http://www.harmy.me/pages/processes.html
+[6]: http://www.harmy.me/pages/port-binding.html
+[7]: http://www.harmy.me/pages/concurrency.html
+[8]: http://www.harmy.me/pages/disposability
+[9]: http://www.harmy.me/pages/dev-prod-parity.html
+[10]: http://www.harmy.me/pages/logs.html
+[11]: http://www.harmy.me/pages/admin-processes.html

@@ -77,6 +77,9 @@ Slug: dev-prod-parity
 
 不同后端服务的适配器仍然是有用的，因为它们可以使移植后端服务变得简单。但应用的所有部署，这其中包括开发、预发布以及线上环境，都应该使用同一个后端服务的相同版本。
 
+[上一页：易处理][8]
+[下一页：日志][10]
+
 [0]: http://www.harmy.me/pages/codebase.html
 [1]: http://www.harmy.me/pages/dependencies.html
 [2]: http://www.harmy.me/pages/config.html

@@ -15,6 +15,8 @@ Slug: admin-process
 
 12-factor尤其青睐那些提供了REPL shell的语言，因为那会让运行一次性脚本变得简单。在本地部署中，开发人员直接在命令行使用shell命令调用一次性管理进程。在线上部署中，开发人员依旧可以使用ssh或是运行环境提供的其他机制来运行这样的进程。
 
+[上一页：日志][10]
+
 [0]: http://www.harmy.me/pages/codebase.html
 [1]: http://www.harmy.me/pages/dependencies.html
 [2]: http://www.harmy.me/pages/config.html
@@ -24,6 +26,6 @@ Slug: admin-process
 [6]: http://www.harmy.me/pages/port-binding.html
 [7]: http://www.harmy.me/pages/concurrency.html
 [8]: http://www.harmy.me/pages/disposability
-[9]: http://www.harmy.me/pages/devprod-parity.html
+[9]: http://www.harmy.me/pages/dev-prod-parity.html
 [10]: http://www.harmy.me/pages/logs.html
 [11]: http://www.harmy.me/pages/admin-processes.html
