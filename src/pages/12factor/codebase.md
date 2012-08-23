@@ -1,6 +1,6 @@
-Title: Codebase
+Title: I. 代码库
+Slug: codebase
 
-## I. 代码库
 ### 一个代码库，无数次部署
 
 一个12原则应用通常托管于版本控制系统，比如[Git](http://git-scm.com/)，[Mercurial](http://mercurial.selenic.com/)， 或[Subversion](http://subversion.apache.org/)。用于跟踪修订版本的数据库被称作*code repository*，经常简称为*code repo*或者*repo*。
