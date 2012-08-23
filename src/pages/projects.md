@@ -1,8 +1,5 @@
 Title: Projects
 
-## [12factor-cn](http://harmy.me/pages/the-twelve-factors.html)
-Chinese translation of 12factor(WIP).
-
 ## [brubeckr](https://github.com/harmy/brubeckr)
 a jsonrpc2 handler for [brubeck][0], a socket [ZeroRPC][1] gateway, play as the bridge between [brubeck][0] and [zerorpc][1]. 
 
