@@ -3,6 +3,9 @@ Date: 2012-08-23
 Intro: 如今，软件通常会作为一种服务来交付，它们被称为网络应用程序，或“软件即服务”（SaaS）。“十二要素应用程序”（12-Factor App）为构建如下的SaaS应用提供了方法论。
 tags: tech
 
+中文翻译：[梁山](https://github.com/liangshan/)
+英文原文：[Adam Wiggins](http://www.12factor.net/)
+
 简介
 ============
 如今，软件通常会作为一种服务来交付，它们被称为网络应用程序，或“软件即服务”（SaaS）。“十二要素应用程序”（12-Factor App）为构建如下的SaaS应用提供了方法论：
