@@ -46,6 +46,8 @@
 <p>例如， Ruby的<a href="http://gembundler.com/">Gem Bundler</a> 使用<code>Gemfile</code>作为依赖项声明清单，使用<code>bundle exec</code>来进行依赖隔离。Python中则可分别使用两种工具 -- <a href="http://www.pip-installer.org/en/latest/">Pip</a> 用作依赖声明， <a href="http://www.virtualenv.org/en/latest/">Virtualenv</a> 用作依赖隔离。甚至C语言也有类似工具， <a href="http://www.gnu.org/s/autoconf/">Autoconf</a> 用作依赖声明，静态链接库用作依赖隔离。无论用什么工具，依赖声明和依赖隔离必须一起使用，否则无法满足12-Factor规范。</p>
 <p>显式声明依赖的优点之一是为新进开发者简化了环境配置流程。新进开发者可以检出应用程序的基准代码，安装编程语言环境和它对应的依赖管理工具，只需通过一个 <em>构建命令</em> 来安装所有的依赖项，即可开始工作。例如，Ruby/Bundler下使用<code>bundle install</code>，而Clojure/<a href="https://github.com/technomancy/leiningen#readme">Leiningen</a> 则是<code>lein deps</code>。</p>
 <p>12-Factor应用同样不会隐式依赖某些系统工具，如ImageMagick或是<code>curl</code>。即使这些工具存在于几乎所有系统，但终究无法保证所有未来的系统都能支持应用顺利运行，或是能够和应用兼容。如果应用必须使用到某些系统工具，那么这些工具应该被包含在应用之中。</p>
+<p><a href="http://www.harmy.me/pages/codebase.html">上一页：基准代码</a>
+<a href="http://www.harmy.me/pages/config.html">下一页：配置</a></p>
 
         </div>
     </div>
