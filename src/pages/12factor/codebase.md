@@ -22,7 +22,8 @@ There is always a one-to-one correlation between the codebase and the app:
 
 
 There is only one codebase per app, but there will be many deploys of the app.  A *deploy* is a running instance of the app.  This is typically a production site, and one or more staging sites.  Additionally, every developer has a copy of the app running in their local development environment, each of which also qualifies as a deploy.
+每个应用只有一个代码库，但会有无数次的部署。一个*部署*是应用的一个运行实例。典型是一个生产环境，一个或多个测试环境。另外，每个开发者都有一份运行于本地开发环境下的拷贝，对应也算是一个部署。
 
 The codebase is the same across all deploys, although different versions may be active in each deploy.  For example, a developer has some commits not yet deployed to staging; staging has some commits not yet deployed to production.  But they all share the same codebase, thus making them identifiable as different deploys of the same app.
-
+代码库在所有的部署中保持一致，虽然每个部署可能用的是不同的版本。举例来说，开发者有一些尚未部署到测试环境的提交，测试环境有一些尚未部署到生产环境的提交。但他们都基于相同的代码库，所以可以被识别为相同应用的不同部署。
 [1]: http://www.harmy.me/pages/dependencies.html
