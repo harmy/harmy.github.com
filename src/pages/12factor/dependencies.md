@@ -1,7 +1,7 @@
 Title: II. 依赖
 Slug: dependencies
 
-### 显示声明并隔离依赖
+### 显式声明并隔离依赖
 
 大多数编程语言提供一个包管理系统，用于分发支持库，比如Perl的[CPAN](http://www.cpan.org/)或者Ruby的[Rubygems](http://rubygems.org/)。通过包管理系统分发的库可以安装到系统范围(称做"site packages")或仅局限于应用所在的目录范围（称为"vendoring"或"bundling"）。
 
