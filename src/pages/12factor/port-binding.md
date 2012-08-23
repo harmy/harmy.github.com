@@ -16,6 +16,7 @@ HTTP并不是唯一一个可以由端口绑定提供的服务。其实几乎所�
 还要指出的是，端口绑定这种方式也意味着一个应用可以成为另外一个应用的 [后端服务][3] ，调用方将服务方提供的相应URL当作资源存入 [配置][2] 以备将来调用。
 
 [上一页：进程][5]
+
 [下一页：并发][7]
 
 [0]: http://www.harmy.me/pages/codebase.html
@@ -27,6 +28,6 @@ HTTP并不是唯一一个可以由端口绑定提供的服务。其实几乎所�
 [6]: http://www.harmy.me/pages/port-binding.html
 [7]: http://www.harmy.me/pages/concurrency.html
 [8]: http://www.harmy.me/pages/disposability
-[9]: http://www.harmy.me/pages/devprod-parity.html
+[9]: http://www.harmy.me/pages/dev-prod-parity.html
 [10]: http://www.harmy.me/pages/logs.html
 [11]: http://www.harmy.me/pages/admin-processes.html

@@ -16,6 +16,7 @@ Slug: backing-services
 部署可以按需加载或卸载资源。例如，如果应用的数据库服务由于硬件问题出现异常，管理员可以从最近的备份中恢复一个数据库，卸载当前的数据库，然后加载新的数据库 -- 整个过程都不需要修改代码。
 
 [上一页：配置][2]
+
 [下一页：构建，发布，运行][4]
 
 [0]: http://www.harmy.me/pages/codebase.html
@@ -27,6 +28,6 @@ Slug: backing-services
 [6]: http://www.harmy.me/pages/port-binding.html
 [7]: http://www.harmy.me/pages/concurrency.html
 [8]: http://www.harmy.me/pages/disposability
-[9]: http://www.harmy.me/pages/devprod-parity.html
+[9]: http://www.harmy.me/pages/dev-prod-parity.html
 [10]: http://www.harmy.me/pages/logs.html
 [11]: http://www.harmy.me/pages/admin-processes.html

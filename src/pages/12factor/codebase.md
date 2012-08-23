@@ -19,6 +19,7 @@ Slug: codebase
 所有部署的基准代码相同，但每份部署可以使用其不同的版本。比如，开发人员可能有一些提交还没有同步至预发布环境；预发布环境也有一些提交没有同步至生产环境。但它们都共享一份基准代码，我们就认为它们只是相同应用的不同部署而已。
 
 [上一页：The 12-Factor App](http://www.harmy.me/the-twelve-factor-app.html) 
+
 [下一页：依赖][1]
 
 [0]: http://www.harmy.me/pages/codebase.html
@@ -30,6 +31,6 @@ Slug: codebase
 [6]: http://www.harmy.me/pages/port-binding.html
 [7]: http://www.harmy.me/pages/concurrency.html
 [8]: http://www.harmy.me/pages/disposability
-[9]: http://www.harmy.me/pages/devprod-parity.html
+[9]: http://www.harmy.me/pages/dev-prod-parity.html
 [10]: http://www.harmy.me/pages/logs.html
 [11]: http://www.harmy.me/pages/admin-processes.html

@@ -14,6 +14,7 @@ Slug: disposability
 进程还应当 **在面对突然死亡时保持健壮** ，例如底层硬件故障。虽然这种情况比起优雅终止来说少之又少，但终究有可能发生。一种推荐的方式是使用一个健壮的后端队列，例如 [Beanstalkd](http://kr.github.com/beanstalkd/) ，它可以在客户端断开或超时后自动退回任务。无论如何，12-factor应用都应该可以设计能够应对意外的、不优雅的终结。 [Crash-only design](http://lwn.net/Articles/191059/) 将这种概念转化为 [合乎逻辑的理论](http://couchdb.apache.org/docs/overview.html)。
 
 [上一页：并发][7]
+
 [下一页：开发环境与线上环境等价][9]
 
 [0]: http://www.harmy.me/pages/codebase.html

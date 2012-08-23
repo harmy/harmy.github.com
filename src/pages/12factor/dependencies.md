@@ -14,6 +14,7 @@ Slug: dependencies
 12-Factor应用同样不会隐式依赖某些系统工具，如ImageMagick或是`curl`。即使这些工具存在于几乎所有系统，但终究无法保证所有未来的系统都能支持应用顺利运行，或是能够和应用兼容。如果应用必须使用到某些系统工具，那么这些工具应该被包含在应用之中。
 
 [上一页：基准代码][0]
+
 [下一页：配置][2]
 
 [0]: http://www.harmy.me/pages/codebase.html
@@ -25,6 +26,6 @@ Slug: dependencies
 [6]: http://www.harmy.me/pages/port-binding.html
 [7]: http://www.harmy.me/pages/concurrency.html
 [8]: http://www.harmy.me/pages/disposability
-[9]: http://www.harmy.me/pages/devprod-parity.html
+[9]: http://www.harmy.me/pages/dev-prod-parity.html
 [10]: http://www.harmy.me/pages/logs.html
 [11]: http://www.harmy.me/pages/admin-processes.html

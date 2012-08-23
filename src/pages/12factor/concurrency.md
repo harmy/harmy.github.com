@@ -16,6 +16,7 @@ Slug: concurrency
 12-factor应用的进程 [不需要守护进程](http://dustin.github.com/2010/02/28/running-processes.html) 或是写入PID文件。相反的，应该借助操作系统的进程管理器(例如 [Upstart](http://upstart.ubuntu.com/) ，分布式的进程管理云平台，或是类似 [Foreman](http://blog.daviddollar.org/2011/05/06/introducing-foreman.html) 的工具)，来管理 [输出流][10] ，响应崩溃的进程，以及处理用户触发的重启和关闭超级进程的请求。
 
 [上一页：端口绑定][6]
+
 [下一页：易处理][8]
 
 [0]: http://www.harmy.me/pages/codebase.html
@@ -27,6 +28,6 @@ Slug: concurrency
 [6]: http://www.harmy.me/pages/port-binding.html
 [7]: http://www.harmy.me/pages/concurrency.html
 [8]: http://www.harmy.me/pages/disposability
-[9]: http://www.harmy.me/pages/devprod-parity.html
+[9]: http://www.harmy.me/pages/dev-prod-parity.html
 [10]: http://www.harmy.me/pages/logs.html
 [11]: http://www.harmy.me/pages/admin-processes.html
