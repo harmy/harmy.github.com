@@ -2,7 +2,7 @@
 
 <html>
 <head>
-    <title>Dependencies | harmy.me</title>
+    <title>II. 依赖 | harmy.me</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <link rel="icon" href=".././theme/img/favicon.png" />
     <link rel="stylesheet" href=".././theme/css/dmpayton.css" type="text/css" />
@@ -38,11 +38,10 @@
         <div id="content" class="">
             
     
-    <h1 class="title">Dependencies</h1>
+    <h1 class="title">II. 依赖</h1>
     
-    <h2>II. Dependencies</h2>
-<h3>Explicitly declare and isolate dependencies</h3>
-<p>Most programming languages offer a packaging system for distributing support libraries, such as <a href="http://www.cpan.org/">CPAN</a> for Perl or <a href="http://rubygems.org/">Rubygems</a> for Ruby.  Libraries installed through a packaging system can be installed system-wide (known as "site packages") or scoped into the directory containing the app (known as "vendoring" or "bundling").</p>
+    <h3>显示声明并隔离依赖</h3>
+<p>大多数编程语言提供一个包管理系统，用于分发支持库，比如Perl的<a href="http://www.cpan.org/">CPAN</a>或者Ruby的<a href="http://rubygems.org/">Rubygems</a>。通过包管理系统分发的库可以安装到系统范围(称做"site packages")或仅局限于应用所在的目录范围（称为"vendoring"或"bundling"）。</p>
 <p><strong>A twelve-factor app never relies on implicit existence of system-wide packages.</strong>  It declares all dependencies, completely and exactly, via a <em>dependency declaration</em> manifest.  Furthermore, it uses a <em>dependency isolation</em> tool during execution to ensure that no implicit dependencies "leak in" from the surrounding system.  The full and explicit dependency specification is applied uniformly to both production and development.</p>
 <p>For example, <a href="http://gembundler.com/">Gem Bundler</a> for Ruby offers the <code>Gemfile</code> manifest format for dependency declaration and <code>bundle exec</code> for dependency isolation.  In, Python there are two separate tools for these steps -- <a href="http://www.pip-installer.org/en/latest/">Pip</a> is used for declaration and <a href="http://www.virtualenv.org/en/latest/">Virtualenv</a> for isolation.  Even C has <a href="http://www.gnu.org/s/autoconf/">Autoconf</a> for dependency declaration, and static linking can provide dependency isolation.  No matter what the toolchain, dependency declaration and isolation must always be used together -- only one or the other is not sufficient to satisfy twelve-factor.</p>
 <p>One benefit of explicit dependency declaration is that it simplifies setup for developers new to the app.  The new developer can check out the app's codebase onto their development machine, requiring only the language runtime and dependency manager installed as prerequisites.  They will be able to set up everything needed to run the app's code with a deterministic <em>build command</em>.  For example, the build command for Ruby/Bundler is <code>bundle install</code>, while for Clojure/<a href="https://github.com/technomancy/leiningen#readme">Leiningen</a> it is <code>lein deps</code>.</p>
