@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>harmy.me</title><link href="http://harmy.me/" rel="alternate"></link><link href="http://harmy.me/feeds/all-en.atom.xml" rel="self"></link><id>http://harmy.me/</id><updated>2012-08-23T00:00:00+08:00</updated><entry><title>The Twelve-Factor App</title><link href="http://harmy.me/the-twelve-factor-app.html" rel="alternate"></link><updated>2012-08-23T00:00:00+08:00</updated><author><name>harmy</name></author><id>tag:harmy.me,2012-08-23:the-twelve-factor-app.html</id><summary type="html">&lt;h1&gt;简介&lt;/h1&gt;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>harmy.me</title><link>http://harmy.me/</link><description></description><atom:link href="http://harmy.me/feeds/tag.tech.rss.xml" rel="self"></atom:link><lastBuildDate>Thu, 23 Aug 2012 00:00:00 +0800</lastBuildDate><item><title>The Twelve-Factor App</title><link>http://harmy.me/the-twelve-factor-app.html</link><description>&lt;h1&gt;简介&lt;/h1&gt;
 &lt;p&gt;如今，软件通常会作为一种服务来交付，它们被称为网络应用程序，或“软件即服务”（SaaS）。“十二要素应用程序”（12-Factor App）为构建如下的SaaS应用提供了方法论：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;使用&lt;strong&gt;标准化&lt;/strong&gt;流程自动配置，从而使新的开发者花费最少的学习成本加入这个项目；&lt;/li&gt;
@@ -39,4 +39,4 @@
 &lt;h2&gt;&lt;a href="http://www.harmy.me/pages/logs.html"&gt;XI. 日志&lt;/a&gt;&lt;/h2&gt;
 &lt;h3&gt;把日志当作事件流&lt;/h3&gt;
 &lt;h2&gt;&lt;a href="http://www.harmy.me/pages/admin-processes.html"&gt;XII. 管理进程&lt;/a&gt;&lt;/h2&gt;
-&lt;h3&gt;后台管理任务当作一次性进程运行&lt;/h3&gt;</summary><category term="tech"></category></entry></feed>
+&lt;h3&gt;后台管理任务当作一次性进程运行&lt;/h3&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">harmy</dc:creator><pubDate>Thu, 23 Aug 2012 00:00:00 +0800</pubDate><guid>tag:harmy.me,2012-08-23:the-twelve-factor-app.html</guid><category>tech</category></item></channel></rss>

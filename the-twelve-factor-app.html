@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>The Twelve-Factor App | harmy.me</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="icon" href="./theme/img/favicon.png" />
+    <link rel="stylesheet" href="./theme/css/dmpayton.css" type="text/css" />
+    <link href="./feeds/all.rss.xml" type="application/atom+xml" rel="alternate" title="harmy.me" />
+
+    <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+</head>
+
+<body class="article the-twelve-factor-app">
+
+<a href="http://github.com/harmy/" id="github-ribbon">
+    <img src="./theme/img/github-ribbon.png" alt="Fork me on Guthub!" />
+</a>
+
+<div id="wrapper">
+    <header id="header">
+        <h1><a href="/">harmy</a></h1>
+        <nav>
+            <ul>
+                <li><a href="/archives.html">Blog</a></li>
+                <li><a href="/pages/projects.html">Projects</a></li>
+                <li><a href="/pages/about.html">About</a></li>
+                <!--<li><a href="/pages/resume.html">Résumé</a></li>-->
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Grumble grumble... -->
+    <div class="clear"></div>
+
+    <div id="main">
+        <div id="content" class="">
+            
+    <h1 class="title">
+        <a href="" rel="bookmark" title="Permalink to The Twelve-Factor App">The Twelve-Factor App</a>
+    </h1>
+    <p class="semibold">Posted August 23, 2012</p>
+    <h1>简介</h1>
+<p>如今，软件通常会作为一种服务来交付，它们被称为网络应用程序，或“软件即服务”（SaaS）。“十二要素应用程序”（12-Factor App）为构建如下的SaaS应用提供了方法论：</p>
+<ul>
+<li>使用<strong>标准化</strong>流程自动配置，从而使新的开发者花费最少的学习成本加入这个项目；</li>
+<li>和操作系统之间尽可能的<strong>划清界限</strong>，在各个系统中提供<strong>最大的可移植性</strong>；</li>
+<li>适合<strong>部署</strong>在现代的<strong>云计算平台</strong>，从而在服务器和系统管理方面节省资源；</li>
+<li>将开发环境和生产环境的<strong>差异降至最低</strong>，并使用<strong>持续交付</strong>实施敏捷开发；</li>
+<li>可以在工具、架构和开发流程不发生明显变化的前提下实现<strong>扩展</strong>；</li>
+</ul>
+<p>这套理论适用于任意语言和后端服务（数据库、消息队列、缓存等）开发的应用程序。</p>
+<h1>背景</h1>
+<p>本文的贡献者者参与过数以百计的应用程序的开发和部署，并通过<a href="http://www.heroku.com/">Heroku</a>平台间接见证了数十万应用程序的开发，运作以及扩展的过程。</p>
+<p>本文综合了我们关于SaaS应用几乎所有的经验和智慧，是开发此类应用的理想实践标准，并特别关注于应用程序如何保持良性成长，开发者之间如何进行有效的代码协作，以及如何<a href="http://blog.heroku.com/archives/2011/6/28/the_new_heroku_4_erosion_resistance_explicit_contracts/">避免软件污染</a> 。</p>
+<p>我们的初衷是分享在现代软件开发过程中发现的一些系统性问题，并加深对这些问题的认识。我们提供了讨论这些问题时所需的共享词汇，同时使用相关术语给出一套针对这些问题的广义解决方案。本文格式的灵感来自于Martin Fowler的书籍： <em><a href="http://books.google.com/books/about/Patterns_of_enterprise_application_archi.html?id=FyWZt5DdvFkC">Patterns of Enterprise Application Architecture</a></em> ， <em><a href="http://books.google.com/books/about/Refactoring.html?id=1MsETFPD3I0C">Refactoring</a></em> 。</p>
+<h1>读者应该是哪些人？</h1>
+<p>任何SaaS应用的开发人员。部署和管理此类应用的运维工程师。</p>
+<h1>The Twelve Factors</h1>
+<h2><a href="http://www.harmy.me/pages/codebase.html">I. 基准代码</a></h2>
+<h3>一份基准代码，多份部署</h3>
+<h2><a href="http://www.harmy.me/pages/dependencies.html">II. 依赖</a></h2>
+<h3>显式声明依赖关系</h3>
+<h2><a href="http://www.harmy.me/pages/config.html">III. 配置</a></h2>
+<h3>在环境中存储配置</h3>
+<h2><a href="http://www.harmy.me/pages/backing-services.html">IV. 后端服务</a></h2>
+<h3>把后端服务当作附加资源</h3>
+<h2><a href="http://www.harmy.me/pages/build-release-run.html">V. 构建，发布，运行</a></h2>
+<h3>严格分离构建和运行</h3>
+<h2><a href="http://www.harmy.me/pages/processes.html">VI. 进程</a></h2>
+<h3>以一个或多个无状态进程运行应用</h3>
+<h2><a href="http://www.harmy.me/pages/port-binding.html">VII. 端口绑定</a></h2>
+<h3>通过端口绑定提供服务</h3>
+<h2><a href="http://www.harmy.me/pages/concurrency.html">VIII. 并发</a></h2>
+<h3>通过进程模型进行扩展</h3>
+<h2><a href="http://www.harmy.me/pages/disposability">IX. 易处理</a></h2>
+<h3>快速启动和优雅终止可最大化健壮性</h3>
+<h2><a href="http://www.harmy.me/pages/devprod-parity.html">X. 开发环境与线上环境等价</a></h2>
+<h3>尽可能的保持开发，预发布，线上环境相同</h3>
+<h2><a href="http://www.harmy.me/pages/logs.html">XI. 日志</a></h2>
+<h3>把日志当作事件流</h3>
+<h2><a href="http://www.harmy.me/pages/admin-processes.html">XII. 管理进程</a></h2>
+<h3>后台管理任务当作一次性进程运行</h3>
+
+    
+    <p class="tags">
+        This post is filed under
+        
+            
+            
+            <a href="/tag/tech.html">tech</a>.
+    </p>
+    
+    
+        <div class="comments">
+        <h2>Comments !</h2>
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+               var disqus_identifier = "the-twelve-factor-app.html";
+               (function() {
+               var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+               dsq.src = 'http://harmy.disqus.com/embed.js';
+               (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+              })();
+            </script>
+        </div>
+        
+
+        </div>
+    </div>
+
+    <footer id="footer">
+        <span>Copyright 2012 harmy.me</span><br />
+        <a href="http://creativecommons.org/licenses/by/3.0/us/" rel="nofollow">Some Rights Reserved</a>
+    </footer>
+</div>
+
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-34158001-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>
