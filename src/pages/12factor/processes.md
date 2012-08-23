@@ -13,7 +13,7 @@ Slug: processes
 
 源文件打包工具([Jammit](http://documentcloud.github.com/jammit/), [django-assetpackager](http://code.google.com/p/django-assetpackager/)) 使用文件系统来缓存编译过的源文件。12-factor应用更倾向于在 [构建步骤][4] 做此动作——正如 [Rails资源管道](http://ryanbigg.com/guides/asset_pipeline.html) ，而不是在运行阶段。
 
-一些互联网系统依赖于 [“粘性session”] (http://en.wikipedia.org/wiki/Load_balancing_%28computing%29#Persistence) ， 这是指将用户session中的数据缓存至某进程的内存中，并将同一用户的后续请求路由到同一个进程。粘性Session是twelve-factor极力反对的。Session中的数据应该保存在诸如[Memcached](http://memcached.org/) 或 [Redis](http://redis.io/) 这样的带有过期时间的缓存中。
+一些互联网系统依赖于 [粘性session] (http://en.wikipedia.org/wiki/Load_balancing_%28computing%29#Persistence) ， 这是指将用户session中的数据缓存至某进程的内存中，并将同一用户的后续请求路由到同一个进程。粘性Session是twelve-factor极力反对的。Session中的数据应该保存在诸如[Memcached](http://memcached.org/) 或 [Redis](http://redis.io/) 这样的带有过期时间的缓存中。
 
 [上一页：构建，发布，运行][4]
 [下一页：端口绑定][6]
