@@ -1,31 +1,27 @@
 Title: The Twelve Factors
 
-## [I. Codebase/代码库][0]
-### One codebase tracked in revision control, many deploys
+## [I. 代码库][0]
 ### 一个代码库，无数次部署
 
-## [II. Dependencies/依赖][1]
-### Explicitly declare and isolate dependencies
-### 显示声明并隔离依赖
+## [II. 依赖][1]
+### 显式声明并隔离依赖
 
-## [III. Config/配置][2]
-### Store config in the environment
+## [III. 配置][2]
 ### 用环境变量保存配置
 
-## [IV. Backing Services/后端服务][3]
-### Treat backing services as attached resources
+## [IV. 后端服务][3]
 ### 将后端服务当做附加资源对待
 
-## [V. Build, release, run/构建，发布，运行][4]
+## [V. 构建，发布，运行][4]
 ### Strictly separate build and run stages
 
-## [VI. Processes/进程][5]
+## [VI. 进程][5]
 ### Execute the app as one or more stateless processes
 
-## [VII. Port binding/端口绑定][6]
+## [VII. 端口绑定][6]
 ### Export services via port binding
 
-## [VIII. Concurrency/并发][7]
+## [VIII. 并发][7]
 ### Scale out via the process model
 
 ## [IX. Disposability][8]
@@ -34,7 +30,7 @@ Title: The Twelve Factors
 ## [X. Dev/prod parity][9]
 ### Keep development, staging, and production as similar as possible
 
-## [XI. Logs/日志][10]
+## [XI. 日志][10]
 ### Treat logs as event streams
 
 ## [XII. Admin processes][11]
