@@ -1,5 +1,6 @@
-Title: 关于后门的一个段子
-Slug: best-backdoor-ever
+title: 关于后门的一个段子
+date: 2012-08-24
+slug: best-backdoor-ever
 intro: 一个关于Ken Thompson的段子
 
 刚听到一个关于Ken Thompson的段子：
