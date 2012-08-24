@@ -1,6 +1,8 @@
 Title: III. 配置
 Slug: config
 
+<center>[上一页：依赖][1]</center>
+
 ### 在环境中存储配置
 
 通常，应用的 *配置* 在不同 [部署][0] (预发布、生产环境、开发环境等等)间会有很大差异。这其中包括：
@@ -23,9 +25,7 @@ Slug: config
 
 12-Factor应用中，环境变量的粒度要足够小，且相对独立。它们永远也不会组合成一个所谓的“环境”，而是独立存在于每个部署之中。当应用程序不断扩展，需要更多种类的部署时，这种配置管理方式能够做到平滑过渡。
 
-[上一页：依赖][1]
-
-[下一页：后端服务][3]
+<center>[下一页：后端服务][3]</center>
 
 [0]: http://www.harmy.me/pages/codebase.html
 [1]: http://www.harmy.me/pages/dependencies.html

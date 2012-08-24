@@ -1,6 +1,8 @@
 Title: VII. 端口绑定
 Slug: port-binding
 
+<center>[上一页：进程][5]</center>
+
 ### 通过端口绑定(*Port binding*)来提供服务
 
 互联网应用有时会运行于服务器的容器之中。例如PHP经常作为 [Apache HTTPD](http://httpd.apache.org/) 的一个模块来运行，正如Java运行于 [Tomcat](http://tomcat.apache.org/) 。
@@ -15,9 +17,7 @@ HTTP并不是唯一一个可以由端口绑定提供的服务。其实几乎所�
 
 还要指出的是，端口绑定这种方式也意味着一个应用可以成为另外一个应用的 [后端服务][3] ，调用方将服务方提供的相应URL当作资源存入 [配置][2] 以备将来调用。
 
-[上一页：进程][5]
-
-[下一页：并发][7]
+<center>[下一页：并发][7]</center>
 
 [0]: http://www.harmy.me/pages/codebase.html
 [1]: http://www.harmy.me/pages/dependencies.html

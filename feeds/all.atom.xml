@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>harmy.me</title><link href="http://harmy.me/" rel="alternate"></link><link href="http://harmy.me/feeds/all.atom.xml" rel="self"></link><id>http://harmy.me/</id><updated>2012-08-23T00:00:00+08:00</updated><entry><title>The Twelve-Factor App</title><link href="http://harmy.me/the-twelve-factor-app.html" rel="alternate"></link><updated>2012-08-23T00:00:00+08:00</updated><author><name>harmy</name></author><id>tag:harmy.me,2012-08-23:the-twelve-factor-app.html</id><summary type="html">&lt;p&gt;中文翻译：&lt;a href="https://github.com/liangshan/"&gt;梁山&lt;/a&gt;
-英文原文：&lt;a href="http://www.12factor.net/"&gt;Adam Wiggins&lt;/a&gt;&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>harmy.me</title><link href="http://harmy.me/" rel="alternate"></link><link href="http://harmy.me/feeds/all.atom.xml" rel="self"></link><id>http://harmy.me/</id><updated>2012-08-23T00:00:00+08:00</updated><entry><title>The Twelve-Factor App</title><link href="http://harmy.me/the-twelve-factor-app.html" rel="alternate"></link><updated>2012-08-23T00:00:00+08:00</updated><author><name>harmy</name></author><id>tag:harmy.me,2012-08-23:the-twelve-factor-app.html</id><summary type="html">&lt;p&gt;中文翻译：&lt;a href="https://github.com/liangshan/"&gt;梁山&lt;/a&gt;  英文原文：&lt;a href="http://www.12factor.net/"&gt;Adam Wiggins&lt;/a&gt;&lt;/p&gt;
 &lt;h1&gt;简介&lt;/h1&gt;
 &lt;p&gt;如今，软件通常会作为一种服务来交付，它们被称为网络应用程序，或“软件即服务”（SaaS）。“十二要素应用程序”（12-Factor App）为构建如下的SaaS应用提供了方法论：&lt;/p&gt;
 &lt;ul&gt;

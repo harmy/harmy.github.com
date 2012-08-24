@@ -1,6 +1,8 @@
 Title: IV. 后端服务
 Slug: backing-services
 
+<center>[上一页：配置][2]</center>
+
 ### 把后端服务(*backing services*)当作附加资源
 
 *后端服务* 是指程序运行所需要的通过网络调用的各种服务，如数据库([MySQL](http://dev.mysql.com/)，[CouchDB](http://couchdb.apache.org/))，消息/队列系统([RabbitMQ](http://www.rabbitmq.com/)，[Beanstalkd](http://kr.github.com/beanstalkd/))，SMTP邮件发送服务([Postfix](http://www.postfix.org/))，以及缓存系统([Memcached](http://memcached.org/))。
@@ -11,13 +13,11 @@ Slug: backing-services
 
 每个不同的后端服务是一份 *资源* 。例如，一个MySQL数据库是一个资源，两个MySQL数据库(用来数据分区)就被当作是2个不同的资源。Twelve-factor应用将这些数据库都视作 *附加资源* ，这些资源和它们附属的部署保持松耦合。
 
-![一种部署附加4个后端服务](/images/attached-resources.png)
+<center><img src="../static/images/attached-resources.png" width="700" alt="一种部署附加4个后端服务" /></center>
 
 部署可以按需加载或卸载资源。例如，如果应用的数据库服务由于硬件问题出现异常，管理员可以从最近的备份中恢复一个数据库，卸载当前的数据库，然后加载新的数据库 -- 整个过程都不需要修改代码。
 
-[上一页：配置][2]
-
-[下一页：构建，发布，运行][4]
+<center>[下一页：构建，发布，运行][4]</center>
 
 [0]: http://www.harmy.me/pages/codebase.html
 [1]: http://www.harmy.me/pages/dependencies.html

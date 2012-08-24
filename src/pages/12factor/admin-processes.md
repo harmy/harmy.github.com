@@ -1,6 +1,8 @@
 Title: XII. 管理进程
 Slug: admin-processes
 
+<center>[上一页：日志][10]</center>
+
 ### 后台管理任务当作一次性进程运行
 
 [进程构成][7] 是指用来处理应用的常规业务(比如处理web请求)的一组进程。与此不同，开发人员经常希望执行一些管理或维护应用的一次性任务，例如：
@@ -15,9 +17,6 @@ Slug: admin-processes
 
 12-factor尤其青睐那些提供了REPL shell的语言，因为那会让运行一次性脚本变得简单。在本地部署中，开发人员直接在命令行使用shell命令调用一次性管理进程。在线上部署中，开发人员依旧可以使用ssh或是运行环境提供的其他机制来运行这样的进程。
 
-[上一页：日志][10]
-
-[0]: http://www.harmy.me/pages/codebase.html
 [1]: http://www.harmy.me/pages/dependencies.html
 [2]: http://www.harmy.me/pages/config.html
 [3]: http://www.harmy.me/pages/backing-services.html

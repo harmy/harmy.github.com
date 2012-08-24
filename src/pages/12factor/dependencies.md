@@ -1,6 +1,8 @@
 Title: II. 依赖
 Slug: dependencies
 
+<center>[上一页：基准代码][0]</center>
+
 ### 显式声明依赖关系(*dependency*)
 
 大多数编程语言都会提供一个打包系统，用来为各个类库提供打包服务，就像Perl的 [CPAN](http://www.cpan.org/) 或是Ruby的 [Rubygems](http://rubygems.org/) 。通过打包系统安装的类库可以是系统级的（称之为"site packages"），或仅供某个应用程序使用，部署在相应的目录中（称之为"vendoring"或"bunding"）。
@@ -13,9 +15,7 @@ Slug: dependencies
 
 12-Factor应用同样不会隐式依赖某些系统工具，如ImageMagick或是`curl`。即使这些工具存在于几乎所有系统，但终究无法保证所有未来的系统都能支持应用顺利运行，或是能够和应用兼容。如果应用必须使用到某些系统工具，那么这些工具应该被包含在应用之中。
 
-[上一页：基准代码][0]
-
-[下一页：配置][2]
+<center>[下一页：配置][2]</center>
 
 [0]: http://www.harmy.me/pages/codebase.html
 [1]: http://www.harmy.me/pages/dependencies.html

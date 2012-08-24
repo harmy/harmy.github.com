@@ -1,6 +1,8 @@
 Title: I. 基准代码
 Slug: codebase
 
+<center>[上一页：The 12-Factor App](http://www.harmy.me/the-twelve-factor-app.html)</center>
+
 ### 一份基准代码（*Codebase*)，多份部署(*deploy*)
 
 12-Factor App(译者注：应该是说一个使用本文概念来设计的应用，下同)通常会使用版本控制系统加以管理，如[Git](http://git-scm.com/), [Mercurial](http://mercurial.selenic.com/), [Subversion](http://subversion.apache.org/)。一份用来跟踪代码所有修订版本的数据库被称作 *代码库* （code repository, code repo, repo）。
@@ -18,9 +20,7 @@ Slug: codebase
 
 所有部署的基准代码相同，但每份部署可以使用其不同的版本。比如，开发人员可能有一些提交还没有同步至预发布环境；预发布环境也有一些提交没有同步至生产环境。但它们都共享一份基准代码，我们就认为它们只是相同应用的不同部署而已。
 
-[上一页：The 12-Factor App](http://www.harmy.me/the-twelve-factor-app.html) 
-
-[下一页：依赖][1]
+<center>[下一页：依赖][1]</center>
 
 [0]: http://www.harmy.me/pages/codebase.html
 [1]: http://www.harmy.me/pages/dependencies.html

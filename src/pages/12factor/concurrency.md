@@ -1,6 +1,8 @@
 Title: VIII. 并发
 Slug: concurrency
 
+<center>[上一页：端口绑定][6]</center>
+
 ### 通过进程模型进行扩展
 
 任何计算机程序，一旦启动，就会生成一个或多个进程。互联网应用采用多种进程运行方式。例如，PHP进程作为Apache的子进程存在，随请求按需启动。Java进程则采取了相反的方式，在程序启动之初JVM就提供了一个超级进程储备了大量的系统资源(CPU和内存)，并通过多线程实现内部的并发管理。上述2个例子中，进程是开发人员可以操作的最小单位。
@@ -15,9 +17,7 @@ Slug: concurrency
 
 12-factor应用的进程 [不需要守护进程](http://dustin.github.com/2010/02/28/running-processes.html) 或是写入PID文件。相反的，应该借助操作系统的进程管理器(例如 [Upstart](http://upstart.ubuntu.com/) ，分布式的进程管理云平台，或是类似 [Foreman](http://blog.daviddollar.org/2011/05/06/introducing-foreman.html) 的工具)，来管理 [输出流][10] ，响应崩溃的进程，以及处理用户触发的重启和关闭超级进程的请求。
 
-[上一页：端口绑定][6]
-
-[下一页：易处理][8]
+<center>[下一页：易处理][8]</center>
 
 [0]: http://www.harmy.me/pages/codebase.html
 [1]: http://www.harmy.me/pages/dependencies.html

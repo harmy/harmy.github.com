@@ -40,7 +40,8 @@
     
     <h1 class="title">I. 基准代码</h1>
     
-    <h3>一份基准代码（<em>Codebase</em>)，多份部署(<em>deploy</em>)</h3>
+    <p><center><a href="http://www.harmy.me/the-twelve-factor-app.html">上一页：The 12-Factor App</a></center></p>
+<h3>一份基准代码（<em>Codebase</em>)，多份部署(<em>deploy</em>)</h3>
 <p>12-Factor App(译者注：应该是说一个使用本文概念来设计的应用，下同)通常会使用版本控制系统加以管理，如<a href="http://git-scm.com/">Git</a>, <a href="http://mercurial.selenic.com/">Mercurial</a>, <a href="http://subversion.apache.org/">Subversion</a>。一份用来跟踪代码所有修订版本的数据库被称作 <em>代码库</em> （code repository, code repo, repo）。</p>
 <p>在类似SVN这样的集中式版本控制系统中， <em>基准代码</em> 就是指控制系统中的这一份代码库；而在Git那样的分布式版本控制系统中， <em>基准代码</em> 则是指最上游的那份代码库。</p>
 <p><img alt="一份代码库对应多份部署" src="../static/images/codebase-deploys.png" /></p>
@@ -51,8 +52,7 @@
 </ul>
 <p>尽管每个应用只对应一份基准代码，但可以同时存在多份部署。每份 <em>部署</em> 相当于运行了一个应用的实例。通常会有一个生产环境，一个或多个预发布环境。此外，每个开发人员都会在自己本地环境运行一个应用实例，这些都相当于一份部署。</p>
 <p>所有部署的基准代码相同，但每份部署可以使用其不同的版本。比如，开发人员可能有一些提交还没有同步至预发布环境；预发布环境也有一些提交没有同步至生产环境。但它们都共享一份基准代码，我们就认为它们只是相同应用的不同部署而已。</p>
-<p><a href="http://www.harmy.me/the-twelve-factor-app.html">上一页：The 12-Factor App</a> </p>
-<p><a href="http://www.harmy.me/pages/dependencies.html">下一页：依赖</a></p>
+<p><center><a href="http://www.harmy.me/pages/dependencies.html">下一页：依赖</a></center></p>
 
         </div>
     </div>

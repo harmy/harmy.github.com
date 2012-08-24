@@ -40,7 +40,8 @@
     
     <h1 class="title">III. 配置</h1>
     
-    <h3>在环境中存储配置</h3>
+    <p><center><a href="http://www.harmy.me/pages/dependencies.html">上一页：依赖</a></center></p>
+<h3>在环境中存储配置</h3>
 <p>通常，应用的 <em>配置</em> 在不同 <a href="http://www.harmy.me/pages/codebase.html">部署</a> (预发布、生产环境、开发环境等等)间会有很大差异。这其中包括：</p>
 <ul>
 <li>数据库，Memcached，以及其他 <a href="http://www.harmy.me/pages/backing-services.html">后端服务</a> 的配置</li>
@@ -54,8 +55,7 @@
 <p><strong>12-Factor推荐将应用的配置存储于 <em>环境变量</em> 中</strong> (<em>env vars</em>, <em>env</em>) 。环境变量可以非常方便地在不同的部署间做修改，却不动一行代码；与配置文件不同，不小心把它们签入代码库的概率微乎其微；与一些传统的解决配置问题的机制（比如Java的属性配置文件）相比，环境变量与语言和系统无关。</p>
 <p>配置管理的另一个方面是分组。有时应用会将配置按照特定部署进行分组（或叫做“环境”），例如Rails中的 <code>development</code>,<code>test</code>, 和 <code>production</code> 环境。这种方法无法轻易扩展：更多部署意味着更多新的环境，例如 <code>staging</code> 或 <code>qa</code> 。 随着项目的不断深入，开发人员可能还会添加他们自己的环境，比如 <code>joes-staging</code> ，这将导致各种配置组合的激增，从而给管理部署增加了很多不确定因素。</p>
 <p>12-Factor应用中，环境变量的粒度要足够小，且相对独立。它们永远也不会组合成一个所谓的“环境”，而是独立存在于每个部署之中。当应用程序不断扩展，需要更多种类的部署时，这种配置管理方式能够做到平滑过渡。</p>
-<p><a href="http://www.harmy.me/pages/dependencies.html">上一页：依赖</a></p>
-<p><a href="http://www.harmy.me/pages/backing-services.html">下一页：后端服务</a></p>
+<p><center><a href="http://www.harmy.me/pages/backing-services.html">下一页：后端服务</a></center></p>
 
         </div>
     </div>

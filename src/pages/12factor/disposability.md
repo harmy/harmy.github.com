@@ -1,6 +1,8 @@
 Title: IX. 易处理
 Slug: disposability
 
+<center>[上一页：并发][7]</center>
+
 ### 快速启动和优雅终止可最大化健壮性
 
 **12-factor应用的 [进程][5] 是 *可支配* 的，意思是说它们可以瞬间开启或停止。** 这有利于快速、弹性的伸缩应用，迅速部署变化的 [代码][0] 或 [配置][2] ，稳健的部署应用。
@@ -13,9 +15,7 @@ Slug: disposability
 
 进程还应当 **在面对突然死亡时保持健壮** ，例如底层硬件故障。虽然这种情况比起优雅终止来说少之又少，但终究有可能发生。一种推荐的方式是使用一个健壮的后端队列，例如 [Beanstalkd](http://kr.github.com/beanstalkd/) ，它可以在客户端断开或超时后自动退回任务。无论如何，12-factor应用都应该可以设计能够应对意外的、不优雅的终结。 [Crash-only design](http://lwn.net/Articles/191059/) 将这种概念转化为 [合乎逻辑的理论](http://couchdb.apache.org/docs/overview.html)。
 
-[上一页：并发][7]
-
-[下一页：开发环境与线上环境等价][9]
+<center>[下一页：开发环境与线上环境等价][9]</center>
 
 [0]: http://www.harmy.me/pages/codebase.html
 [1]: http://www.harmy.me/pages/dependencies.html
