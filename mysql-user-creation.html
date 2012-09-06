@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Mysql创建用户总结 | harmy.me</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="icon" href="./theme/img/favicon.png" />
+    <link rel="stylesheet" href="./theme/css/dmpayton.css" type="text/css" />
+    <link href="./feeds/all.rss.xml" type="application/atom+xml" rel="alternate" title="harmy.me" />
+
+    <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+</head>
+
+<body class="article mysql-user-creation">
+
+<div class="ribbon"> 
+    <a href="https://github.com/harmy">See me on GitHub</a> 
+</div> 
+
+<div id="wrapper">
+    <header id="header">
+        <h1><a href="/">harmy</a></h1>
+        <nav>
+            <ul>
+                <li><a href="/archives.html">Blog</a></li>
+                <li><a href="/pages/projects.html">Projects</a></li>
+                <li><a href="/pages/about.html">About</a></li>
+                <!--<li><a href="/pages/resume.html">Résumé</a></li>-->
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Grumble grumble... -->
+    <div class="clear"></div>
+
+    <div id="main">
+        <div id="content" class="">
+            
+    <h1 class="title">
+        <a href="" rel="bookmark" title="Permalink to Mysql创建用户总结">Mysql创建用户总结</a>
+    </h1>
+    <p class="semibold">Posted September 06, 2012</p>
+    <p>在mysql下创建用户是家常便饭的事，每次都去google，各种不同版本看的眼花，不如自己记录一下，以后用得着。</p>
+<p>用root账户登录mysql，敲入并执行下列指令可以创建一个新的数据库并赋予myuser用户从任何主机任意操作该数据库</p>
+<div class="codehilite"><pre><span class="n">create</span> <span class="n">database</span> <span class="n">mydb</span><span class="p">;</span>
+
+<span class="n">CREATE</span> <span class="n">USER</span> <span class="s">&#39;myuser&#39;</span><span class="p">@</span><span class="s">&#39;localhost&#39;</span> <span class="n">IDENTIFIED</span> <span class="n">BY</span> <span class="s">&#39;mypassword&#39;</span><span class="p">;</span>
+<span class="n">CREATE</span> <span class="n">USER</span> <span class="s">&#39;myuser&#39;</span><span class="p">@</span><span class="s">&#39;%&#39;</span> <span class="n">IDENTIFIED</span> <span class="n">BY</span> <span class="s">&#39;mypassword&#39;</span><span class="p">;</span>
+
+<span class="n">GRANT</span> <span class="n">ALL</span> <span class="n">PRIVILEGES</span> <span class="n">ON</span> <span class="n">mydb</span><span class="o">.*</span> <span class="n">TO</span> <span class="s">&#39;myuser&#39;</span><span class="p">@</span><span class="s">&#39;localhost&#39;</span><span class="p">;</span>
+<span class="n">GRANT</span> <span class="n">ALL</span> <span class="n">PRIVILEGES</span> <span class="n">ON</span> <span class="n">mydb</span><span class="o">.*</span> <span class="n">TO</span> <span class="s">&#39;myuser&#39;</span><span class="p">@</span><span class="s">&#39;%&#39;</span><span class="p">;</span>
+
+<span class="n">FLUSH</span> <span class="n">PRIVILEGES</span><span class="p">;</span>
+</pre></div>
+
+
+<p>为什么我们要添加两个用户呢？原因是mysql认为localhost是个特殊的主机，因此不能通过%匹配它（真够SB)。所以如果你要在本机通过unix socket而不是tcp连接访问数据库，就要加这条了。此外相同的用户可以有不同的密码和权限组合，数量取决于你有几个这样的user-host配对。</p>
+<p>如果你想修改密码的话，请执行下列指令：</p>
+<div class="codehilite"><pre><span class="n">SET</span> <span class="n">PASSWORD</span> <span class="n">FOR</span> <span class="s">&#39;myuser&#39;</span><span class="p">@</span><span class="s">&#39;localhost&#39;</span> <span class="p">=</span> <span class="n">PASSWORD</span><span class="p">(</span><span class="s">&#39;newpass&#39;</span><span class="p">);</span>
+<span class="n">SET</span> <span class="n">PASSWORD</span> <span class="n">FOR</span> <span class="s">&#39;myuser&#39;</span><span class="p">@</span><span class="s">&#39;%&#39;</span> <span class="p">=</span> <span class="n">PASSWORD</span><span class="p">(</span><span class="s">&#39;newpass&#39;</span><span class="p">);</span>
+<span class="n">FLUSH</span> <span class="n">PRIVILEGES</span><span class="p">;</span>
+</pre></div>
+
+    
+    
+        <div class="comments">
+        <h2>Comments !</h2>
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+               var disqus_identifier = "mysql-user-creation.html";
+               (function() {
+               var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+               dsq.src = 'http://harmy.disqus.com/embed.js';
+               (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+              })();
+            </script>
+        </div>
+    
+
+        </div>
+    </div>
+
+    <footer id="footer">
+        <span>Copyright 2012 harmy.me</span><br />
+        <a href="http://creativecommons.org/licenses/by/3.0/us/" rel="nofollow">Some Rights Reserved</a>
+    </footer>
+</div>
+
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-34158001-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>
