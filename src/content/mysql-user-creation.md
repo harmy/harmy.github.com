@@ -1,6 +1,6 @@
 title: Mysql创建用户总结
 date: 2012-09-06
-slug: best-backdoor-ever
+slug: mysql-user-creation
 intro: Mysql如何创建用户
 
 在mysql下创建用户是家常便饭的事，每次都去google，各种不同版本看的眼花，不如自己记录一下，以后用得着。
